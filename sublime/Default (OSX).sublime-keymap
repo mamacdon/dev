@@ -1,0 +1,15 @@
+[
+	// Fix the godawful default Ctrl+Tab/Ctrl+Shift+Tab behavior
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+	// Ctrl+D or Cmd+d to delete lines like in Eclipse
+	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["super+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// Ctrl+. and Ctrl+, to jump to next/previous error, like in Eclipse. This is not 100%
+	// equivalent since it only traverses SublimeLinter errors, not every ruler annotation.
+	// Also it barfs up a modal alert sometimes :(
+	{ "keys": ["ctrl+."], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
+	{ "keys": ["ctrl+,"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
+]
