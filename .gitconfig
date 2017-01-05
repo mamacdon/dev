@@ -1,9 +1,3 @@
-[user]
-[merge]
-[core]
-	filemode = false
-[gui]
-[apply]
 [alias]
 	au = update-index --assume-unchanged
 	co = checkout
@@ -16,7 +10,16 @@
 	top = ! $HOME/bin/git-link.sh
 	link= ! $HOME/bin/git-link.sh
 	upbase = !$HOME/bin/git-upbase.sh
-[difftool]
-	prompt = false
 [color]
 	ui = auto
+[core]
+	excludesfile = /Users/mamacdon/.gitignore_global
+	editor = /usr/bin/vim
+	filemode = false
+[difftool]
+	prompt = false
+[push]
+	default = simple
+[user]
+	name = Mark Macdonald
+	email = mamacdon@ca.ibm.com
