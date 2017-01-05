@@ -3,12 +3,25 @@
 	{ "keys": ["ctrl+tab"], "command": "next_view" },
 	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+
 	// Ctrl+D to delete lines like in Eclipse
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 
-	// Ctrl+. and Ctrl+, to jump to next/previous error, like in Eclipse. This is not 100%
+	// Ctrl+Shift+. and Ctrl+Shift+, to jump to next/previous error, like in Eclipse. This is not 100%
 	// equivalent since it only traverses SublimeLinter errors, not every ruler annotation.
-	// Also it barfs up a modal alert sometimes :(
-	{ "keys": ["ctrl+."], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
-	{ "keys": ["ctrl+,"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
+	// added the SHIFT modifier because Ctrl+. is widely used by other SublimeText tools
+	{ "keys": ["ctrl+shift+."], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
+	{ "keys": ["ctrl+shift+,"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
+
+	// Ctrl+Shift+G: guess indent settings from buffer
+	{ "keys": ["ctrl+shift+g"], "command": "detect_indentation" },
+
+	// For GoSublime, bind F3 to go-to-definition
+	{
+		"keys": ["ctrl+f3"],
+		"command": "gs_doc",
+		"args": {"mode": "goto"},
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+	},
+
 ]

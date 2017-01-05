@@ -1,21 +1,70 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"always_show_minimap_viewport": false,
+	"color_scheme": "Packages/User/Mark/Monokai (SL) - darker.tmTheme",
 	"default_line_ending": "unix",
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.min.js",
+		"*.css.map",
+		"*.js.map",
+		"npm-debug.log.*",
+		"newrelic_agent.log"
+	],
 	"folder_exclude_patterns":
 	[
-		".svn",
+		".bash_sessions",
+		".cache",
+		".eclipse",
 		".git",
 		".hg",
+		".local",
+		".node-gyp",
+		".npm",
+		".nvm",
+		".p2",
+		".svn",
+		".Trash",
+		".yardoc",
+		"backup",
+		"build",
+		"bower_components",
 		"CVS",
+		"dist",
+		"doc",
+		"IDS.Web.IDE",
+		"Music",
 		"node_modules",
-		"target"
+		"org.eclipse.orion.client",
+		"out",
+		"publicAddTool",
+		"rcov",
+		"requirejs",
+		"target",
+		"vendor",
+		"v1"
 	],
-	"font_size": 10,
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"preview_on_click": false
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"backup/**",
+		"code/**",
+		"Music/**"
+	],
+	"open_files_in_new_window": true,
+	"preview_on_click": false,
+	"rulers":
+	[
+		80,
+		100,
+		120
+	],
+	"show_full_path": true
 }
