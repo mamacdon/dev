@@ -25,10 +25,10 @@ nodejs_helper_copy_with_backup() {
 
 nodejs_helper_cleanup() {
     popd &>/dev/null
-    if [[ "$TMPDIR" =~ "/tmp" ]]; then
-        # echo "Clean temp dir $TMPDIR"
-        #rm -rf "$TMPDIR"
-    fi
+    # if [[ "$TMPDIR" =~ "/tmp" ]]; then
+    #     echo "Clean temp dir $TMPDIR"
+    #     ##rm -rf "$TMPDIR"
+    # fi
 }
 
 # Usage: npm_shrinkwrap_clean path/to/package.json
@@ -44,14 +44,24 @@ npm_shrinkwrap_clean() {
     DEST=$(cd $(dirname "$FILE") && pwd)
     [ ! -z "$FILE" ] || { nodejs_helper_error "Usage: shrinkwrap_clean /path/to/package.json" && return 1 ; }
     [ -f "$FILE" ]   || { nodejs_helper_error "File does not exist: $FILE" && return 1 ; }
+    # TODO --production flag
+    PRODUCTION=""
 
     TMPDIR=$(mktemp -d)
     cp "$FILE" "$TMPDIR"
+
+    # Copy file: dependencies, if any - these must be in the temp folder or npm install will fail
+    for FILEDEP in $(jq < ${FILE} .dependencies,.optionalDependencies | grep 'file:' | awk '{print $2}' | tr -d '",' | cut -d ':' -f2); do
+        echo "Copy 'file:' dependency: $FILEDEP to $TMPDIR"
+        cp -r --parents "$FILEDEP" "$TMPDIR"
+    done
+
     pushd "$TMPDIR" &>/dev/null
     trap nodejs_helper_cleanup RETURN  # restore original dir before exiting
 
     if npm cache clear \
-        && npm install \
+        && npm set progress=false \
+        && npm install ${PRODUCTION} \
         && npm shrinkwrap \
         && nodejs_helper_copy_with_backup "${TMPDIR}/npm-shrinkwrap.json" "${DEST}"
     then
