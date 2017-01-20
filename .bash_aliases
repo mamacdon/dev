@@ -24,6 +24,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias grpe=grep
+alias edit="open -a 'Sublime Text' $@"
 
 # CF stuff
 alias push_new_app="~/bin/push_new_app.sh push"
