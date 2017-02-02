@@ -44,4 +44,10 @@
 
 	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
 	{ "keys": ["super+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+
+	// VIEW
+	// command:  {"setting": "tab_size", "value": 2}
+	{ "keys": ["ctrl+shift+s"], "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"} },
+	{ "keys": ["ctrl+shift+minus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
+	{ "keys": ["ctrl+shift+plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } }
 ]

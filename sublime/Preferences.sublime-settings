@@ -37,6 +37,7 @@
 		"IDS.Web.IDE",
 		"Music",
 		"node_modules",
+		"obsolete",
 		"org.eclipse.orion.client",
 		"out",
 		"publicAddTool",
