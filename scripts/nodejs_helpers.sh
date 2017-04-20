@@ -72,3 +72,7 @@ npm_shrinkwrap_clean() {
         return 1
     fi
 }
+
+npm_whitewater() {
+    npm $@ --registry=https://npm-registry.whitewater.ibm.com
+}
