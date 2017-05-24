@@ -47,7 +47,7 @@
 	{ "keys": ["super+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
 
 	// VIEW
-	// command:  {"setting": "tab_size", "value": 2}
+	// Shortcuts for toggling tab/space
 	{ "keys": ["ctrl+shift+super+s"], "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"} },
 	{ "keys": ["ctrl+shift+super+minus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
 	{ "keys": ["ctrl+shift+super+plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } }
