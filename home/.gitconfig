@@ -7,7 +7,6 @@
 	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative
 	nau = update-index --no-assume-unchanged
 	rbi = rebase -i
-	rebaes = rebase
 	top = ! $HOME/bin/git-link.sh
 	link= ! $HOME/bin/git-link.sh
 	upbase = !$HOME/bin/git-upbase.sh
