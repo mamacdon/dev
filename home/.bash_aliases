@@ -62,6 +62,12 @@ function git_autocomplete_aliases() {
 	__git_complete gp _git_pull
 }
 
+# interactive prompts don't work in cygwin/Git for windows
+if uname | grep MINGW > /dev/null ; then
+	alias cf='winpty cf'
+	alias nvm=nodist
+fi
+
 # https://github.com/github/hub
 #eval "$(hub alias -s)"
 # this was annoying
