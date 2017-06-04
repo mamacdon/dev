@@ -62,10 +62,29 @@ function git_autocomplete_aliases() {
 	__git_complete gp _git_pull
 }
 
-# interactive prompts don't work in cygwin/Git for windows
+function __win_edit() {
+	start $(cygpath -w $1)
+}
+
+function __win_killall() {
+	NAME="$1"
+	# Need double slash to stop MSYSGIT stupidity
+	taskkill //f //t //im "$NAME"'"*'
+	#taskkill '/'f '/'t '/'im '"*'"$NAME"'"*'
+	# taskkill "/f" "/t" "/im" '"'"$NAME"'"'
+}
+
 if uname | grep MINGW > /dev/null ; then
+	# interactive prompts don't work in cygwin/Git for windows
 	alias cf='winpty cf'
+
+	# ..but the above breaks piping so we need the original available too
+	alias pcf="'"$(which cf)"'"
+
 	alias nvm=nodist
+
+	alias edit=__win_edit
+	alias killall=__win_killall
 fi
 
 # https://github.com/github/hub
