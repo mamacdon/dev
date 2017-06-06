@@ -1,14 +1,21 @@
 #!/bin/bash
+function err() {
+    echo $1 >&2
+}
+
 DEV=$HOME/code/misc/dev
 BIN="$HOME/bin"
 OSX=".*Darwin.*"
 BASH_ON_WINDOWS=".*Microsoft.*"
+GIT_FOR_WINDOWS=".*MINGW.*"
 
 OS=$(uname -a)
 if [[ "$OS" =~ $OSX ]]; then
     SUBLIME_USER="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 elif [[ "$OS" =~ $BASH_ON_WINDOWS ]]; then
     SUBLIME_USER="/mnt/c/Users/$(whoami)/AppData/Roaming/Sublime Text 3/Packages/User"
+elif [[ "$OS" =~ "$GIT_FOR_WINDOWS" ]]; then
+    SUBLIME_USER="$HOME/AppData/Roaming/Sublime Text 3/Packages/User"
 else
     err "unknown OS $OS"
     exit 1
@@ -28,10 +35,6 @@ SUBLIME_PREFS=(
     'Preferences.sublime-settings'
     'SublimeLinter.sublime-settings'
 )
-
-function err() {
-    echo $1 >&2
-}
 
 echo "Copy home"
 for FILE in "${HOME_SCRIPTS[@]}"; do
