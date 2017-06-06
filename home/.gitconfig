@@ -12,14 +12,11 @@
 	upbase = !$HOME/bin/git-upbase.sh
 [color]
 	ui = auto
-[core]
-	excludesfile = /Users/mamacdon/.gitignore_global
-	editor = /usr/bin/vim
-	filemode = false
-[difftool]
-	prompt = false
-[push]
-	default = simple
 [user]
 	name = Mark Macdonald
-	email = mamacdon@gmail.com
+	email = mark.macdonald@gemalto.com
+[http]
+	proxy = https://proxy-us-austin.gemalto.com:8080
+	sslcainfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+[https]
+	proxy = https://proxy-us-austin.gemalto.com:8080

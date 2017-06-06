@@ -14,7 +14,7 @@ if [[ "$OS" =~ $OSX ]]; then
     SUBLIME_USER="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 elif [[ "$OS" =~ $BASH_ON_WINDOWS ]]; then
     SUBLIME_USER="/mnt/c/Users/$(whoami)/AppData/Roaming/Sublime Text 3/Packages/User"
-elif [[ "$OS" =~ "$GIT_FOR_WINDOWS" ]]; then
+elif [[ "$OS" =~ $GIT_FOR_WINDOWS ]]; then
     SUBLIME_USER="$HOME/AppData/Roaming/Sublime Text 3/Packages/User"
 else
     err "unknown OS $OS"
@@ -29,12 +29,6 @@ BIN_SCRIPTS=(
     'lock_screen.sh'
     'nodejs_helpers.sh'
 )
-SUBLIME_PREFS=(
-    'Default (OSX).sublime-keymap'
-    'Default (Windows).sublime-keymap'
-    'Preferences.sublime-settings'
-    'SublimeLinter.sublime-settings'
-)
 
 echo "Copy home"
 for FILE in "${HOME_SCRIPTS[@]}"; do
@@ -47,6 +41,8 @@ for FILE in "${BIN_SCRIPTS[@]}"; do
 done
 
 echo && echo "Copy Sublime"
-for FILE in "${SUBLIME_PREFS[@]}"; do
-    cp "$SUBLIME_USER/$FILE" "$DEV/sublime/$FILE" || err "Failed to copy $SUBLIME/$FILE"
-done
+(
+    cd "$SUBLIME_USER"
+    find . -name '*.sublime-keymap'   -print -exec cp {} "$DEV/sublime" \;
+    find . -name '*.sublime-settings' -print -exec cp {} "$DEV/sublime" \;
+)

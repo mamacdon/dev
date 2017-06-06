@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": false,
-	"color_scheme": "Packages/User/Mark/Monokai (SL) - darker.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"default_line_ending": "unix",
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
@@ -48,7 +48,7 @@
 		"vendor",
 		"v1"
 	],
-	"font_size": 11,
+	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -68,5 +68,6 @@
 		100,
 		120
 	],
-	"show_full_path": true
+	"show_full_path": true,
+	"theme": "Default.sublime-theme"
 }

@@ -13,8 +13,21 @@
 	{ "keys": ["ctrl+shift+."], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
 	{ "keys": ["ctrl+shift+,"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
 
+	// Move lines up and down
+	// TODO find alternate binding for select-lines
+	{ "keys": ["ctrl+alt+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+alt+down"], "command": "swap_line_down" },
+
 	// Ctrl+Shift+G: guess indent settings from buffer
 	{ "keys": ["ctrl+shift+g"], "command": "detect_indentation" },
+
+	// Sidebar
+	{ "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar" },
+	{ "keys": ["ctrl+shift+alt+r"], "command": "reveal_in_side_bar" },
+	{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": { "dir": "$file_path", "file": "$file_name" } },
+
+	// Rebind Goto Symbol
+	{ "keys": ["ctrl+alt+r"], "command": "goto_symbol_in_project" },
 
 	// For GoSublime, bind F3 to go-to-definition
 	{
@@ -23,5 +36,17 @@
 		"args": {"mode": "goto"},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
+
+	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+	//{ "keys": ["super+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+
+	// VIEW
+	// Shortcuts for toggling tab/space
+	{ "keys": ["ctrl+shift+alt+s"], "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"} },
+	{ "keys": ["ctrl+shift+alt+minus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
+	{ "keys": ["shift+control+keypad_minus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
+	{ "keys": ["ctrl+shift+alt+plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } },
+	{ "keys": ["shift+control+keypad_plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } },
+
 
 ]
