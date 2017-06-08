@@ -13,7 +13,7 @@
 # 5090          modem diag page         HTTP
 ssh_home_mamacdon_ca() {
     ssh home.mamacdon.ca \
-        -i $HOME/.ssh/id_rsa_home \
+        -i $HOME/.ssh/id_rsa \
         -p 2222 \
         -L 1139:localhost:139 \
         -L 3391:192.168.1.3:3389 \
