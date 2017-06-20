@@ -7,11 +7,13 @@
 	[
 		"AngularJS",
 		"LockTab",
+		"Markdown Preview",
 		"Package Control",
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"TabsExtra",
 		"TrailingSpaces"
 	]
 }

@@ -1,0 +1,12 @@
+{
+    // By default TabsExtra forgets a tab's "stickiness" when
+    // any "tab close" command is issued.  You can make the tab's
+    // "Stickiness" persist by enabling the following feature.
+    "persistent_sticky": true,
+
+    // Menu layout include or exclude, in whatever order you desire, the following options:
+    // ["close", "sticky", "open", "clone", "save", "delete", "rename", "reveal", "path", "revert", "sort"]
+    // When done, go to Preferences->Package Settings->TabsExtra and Install/Upgrade either
+    // the default TabsMenu or the Override Menu which overrides the "Default" package's menu.
+    "menu_layout": ["sticky", "open", "clone", "reveal", "path", "sort"],
+}
