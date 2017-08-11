@@ -1,6 +1,7 @@
 # Git aliases
 alias gti=git
 alias ga="git add"
+alias gca="git commit --amend"
 alias gcach="git commit --amend -C HEAD"
 alias gb="git branch"
 #alias gbug=git_bug
@@ -30,12 +31,10 @@ alias l='ls -CF'
 
 # Misc
 alias grpe=grep
-alias edit="open -a 'Sublime Text' $@"
 alias wsk="wsk -i"
+alias edit="open -a 'Sublime Text' $@"
 
 # CF stuff
-#alias push_new_app="~/bin/push_new_app.sh push"
-#alias cleanup_temp_apps="~/bin/push_new_app.sh cleanup"
 alias target="$HOME/bin/cf_target.sh"
 
 # Docker
@@ -47,6 +46,14 @@ alias doicker=docker
 alias dicekr=docker
 alias dickewr=docker
 alias dicker=docker
+
+## Use the IP since most docker images will use Google DNS which can't resolve proxy hostname
+alias docker_build="MSYS_NO_PATHCONV=1 docker build \
+	--build-arg http_proxy=$PROXY_IP \
+	--build-arg https_proxy=$PROXY_IP \
+	--build-arg no_proxy=$NO_PROXY "
+
+alias scoop="powershell -ex unrestricted scoop.ps1"
 
 # Must be a function in order to get $@ plus & i guess?
 function gk() {
@@ -63,7 +70,8 @@ function git_autocomplete_aliases() {
 }
 
 function __win_edit() {
-	start $(cygpath -w $1)
+	FILE=$(cygpath -w $1)
+	start "$FILE"
 }
 
 function __win_killall() {
@@ -84,6 +92,7 @@ if uname | grep MINGW > /dev/null ; then
 	alias nvm=nodist
 
 	alias edit=__win_edit
+	alias open=__win_edit
 	alias killall=__win_killall
 fi
 
