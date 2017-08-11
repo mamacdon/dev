@@ -12,8 +12,11 @@
 		"*.css.map",
 		"*.js.map",
 		"npm-debug.log.*",
-		"newrelic_agent.log"
+		"newrelic_agent.log",
+		"stats.json",
+		"report.html"
 	],
+	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".bash_sessions",
@@ -33,7 +36,6 @@
 		"build",
 		"bower_components",
 		"CVS",
-		"dist",
 		"doc",
 		"IDS.Web.IDE",
 		"Music",
@@ -41,6 +43,7 @@
 		"obsolete",
 		"org.eclipse.orion.client",
 		"out",
+		"public",
 		"publicAddTool",
 		"rcov",
 		"requirejs",

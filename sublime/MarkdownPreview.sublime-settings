@@ -1,3 +1,5 @@
 {
+	"enable_autoreload": true,
+	"enable_highlight": true,
 	"github_oauth_token": "1046f5dc88cac3ec2d544f7acec0f59308188f18"
 }

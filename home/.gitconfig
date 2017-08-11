@@ -16,7 +16,10 @@
 	name = Mark Macdonald
 	email = mark.macdonald@gemalto.com
 [http]
-	proxy = https://proxy-us-austin.gemalto.com:8080
 	sslcainfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+	proxy = http://10.43.216.8:8080
 [https]
-	proxy = https://proxy-us-austin.gemalto.com:8080
+[url "git@gitlab.sfnt.local:"]
+	insteadOf = https://gitlab.sfnt.local/
+[core]
+	excludesfile = C:/Users/10052628/.gitignore_global
