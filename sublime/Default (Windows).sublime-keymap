@@ -39,8 +39,9 @@
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 
+	{ "keys": ["ctrl+shift+7"], "command": "set_setting", "args": {"setting": "wrap_width", "value": 100} },
 	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
-	//{ "keys": ["super+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+	{ "keys": ["ctrl+shift+0"], "command": "set_setting", "args": {"setting": "wrap_width", "value": 0} },
 
 	// VIEW
 	// Shortcuts for toggling tab/space
