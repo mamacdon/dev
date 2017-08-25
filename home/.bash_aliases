@@ -76,10 +76,13 @@ function __win_edit() {
 
 function __win_killall() {
 	NAME="$1"
+	if [ -z "$NAME" ]; then
+		echo "Usage: killall NAME..." >&2
+		return 1
+	fi
 	# Need double slash to stop MSYSGIT stupidity
-	taskkill //f //t //im "$NAME"'"*'
-	#taskkill '/'f '/'t '/'im '"*'"$NAME"'"*'
-	# taskkill "/f" "/t" "/im" '"'"$NAME"'"'
+	taskkill //f //t //im "$NAME"
+	##taskkill //f //t //im "$NAME"'"*'
 }
 
 if uname | grep MINGW > /dev/null ; then
