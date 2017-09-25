@@ -11,10 +11,12 @@
 		"*.min.js",
 		"*.css.map",
 		"*.js.map",
+		"debug.log",
 		"npm-debug.log.*",
 		"newrelic_agent.log",
 		"stats.json",
-		"report.html"
+		"report.html",
+		"yarn-error.log"
 	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
