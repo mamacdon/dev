@@ -1,8 +1,14 @@
 [
+	// Disable close window command
+	{ "keys": ["ctrl+shift+w"], "command": "noop" },
+
 	// Fix the godawful default Ctrl+Tab/Ctrl+Shift+Tab behavior
 	{ "keys": ["ctrl+tab"], "command": "next_view" },
 	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 	{ "keys": ["ctrl+shift+9"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+
+	// TODO figure out how to bind hotkey to tab switcher's context menu
+	// command: close_others_by_index {"group": 0, "index": 2}
 
 	// Ctrl+D to delete lines like in Eclipse
 	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
