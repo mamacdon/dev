@@ -12,7 +12,7 @@
 # 5080          router admin page       HTTP
 # 5090          modem diag page         HTTP
 ssh_home_mamacdon_ca() {
-    ssh home.mamacdon.ca \
+    ssh mamacdon@home.mamacdon.ca \
         -i $HOME/.ssh/id_rsa \
         -p 2222 \
         -L 1139:localhost:139 \
