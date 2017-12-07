@@ -23,6 +23,7 @@
 	insteadOf = https://gitlab.protectv.local/
 [core]
 	excludesfile = C:/Users/10052628/.gitignore_global
+	fscache = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

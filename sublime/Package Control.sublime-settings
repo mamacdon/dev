@@ -17,6 +17,7 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-tslint",
 		"TabsExtra",
 		"TrailingSpaces",
 		"TypeScript"
