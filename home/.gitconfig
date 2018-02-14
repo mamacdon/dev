@@ -5,10 +5,11 @@
 	glt = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	glp = log --pretty=full
 	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative
+	link= ! $HOME/bin/git-link.sh
 	nau = update-index --no-assume-unchanged
 	rbi = rebase -i
+	rebsae = rebase
 	top = ! $HOME/bin/git-link.sh
-	link= ! $HOME/bin/git-link.sh
 	upbase = !$HOME/bin/git-upbase.sh
 [color]
 	ui = auto
