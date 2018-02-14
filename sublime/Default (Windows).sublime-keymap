@@ -56,8 +56,13 @@
 	{ "keys": ["shift+control+keypad_minus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
 	{ "keys": ["ctrl+shift+alt+plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } },
 	{ "keys": ["shift+control+keypad_plus"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } },
+	{ "keys": ["ctrl+shift+2"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2 } },
 	{ "keys": ["ctrl+shift+3"], "command": "set_setting", "args": {"setting": "tab_size", "value": 3 } },
+	{ "keys": ["ctrl+shift+4"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4 } },
 
 	{ "keys": ["insert"], "command": "unbound" },
+
+	// TypeScript plugin
+	{ "keys": ["ctrl+shift+x"], "command": "typescript_project_error_list"},
 
 ]
