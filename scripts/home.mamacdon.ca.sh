@@ -24,7 +24,7 @@ ssh_home_mamacdon_ca() {
 }
 
 scp_home_mamacdon_ca() {
-    scp -i $HOME/.ssh/id_rsa_home \
+    scp -i $HOME/.ssh/id_rsa \
         -P 2222 \
         "$@"
 }

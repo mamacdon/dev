@@ -12,3 +12,27 @@ git_delete_branches() {
         gb -D $BRANCH
     done
 }
+
+# Usage: git_push_to_remote [-f] REMOTE LOCAL_REF REMOTE_REF
+git_push_to_remote() {
+    local usage="git_push_to_remote [-f] REMOTE LOCAL_REF REMOTE_REF"
+    local force=""
+    while [[ "$#" -gt 0 ]]; do
+        local arg="$1"
+        case "$arg" in
+            -f|--force) force="--force" ;;
+            *)
+                [[ -z "$remote" ]] && remote="$arg"
+                [[ -z "$local_ref" ]] && local_ref="$arg"
+                [[ -z "$remote_ref" ]] && remote_ref="$arg"
+                ;;
+        esac
+    done
+
+    : ${remote?"$usage"}
+    : ${local_ref?"$usage"}
+    : ${remote_ref?"$usage"}
+
+    echo "Push local ref ${local_ref} to ${remote}/${remote_ref}..."
+    git push ${force} "${remote}" "${local_ref}:refs/heads/${remote_ref}"
+}

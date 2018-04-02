@@ -1,5 +1,6 @@
 {
 	"bootstrapped": true,
+	"http_proxy": "10.43.216.8:8080",
 	"in_process_packages":
 	[
 	],
@@ -16,8 +17,9 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-tslint",
+		"SublimeLinter-eslint",
+		"SublimeLinter-shellcheck",
 		"TabsExtra",
 		"TrailingSpaces",
 		"TypeScript"
