@@ -18,7 +18,7 @@
 	email = mark.macdonald@gemalto.com
 [http]
 	sslcainfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
-	proxy = http://10.101.65.50:8080
+	proxy = http://10.43.216.8:8080
 [https]
 [url "git@gitlab.sfnt.local:"]
 	insteadOf = https://gitlab.protectv.local/

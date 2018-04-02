@@ -1,9 +1,0 @@
-{
-	"alert": false,
-	"focus_on_closed_tab": false,
-	"locked":
-	[
-		"C:\\Users\\10052628\\code\\dpaas\\dpod-ui\\app\\main.ts",
-		"C:\\Users\\10052628\\code\\dpaas\\dpod-ui\\app\\app.module.ts"
-	]
-}

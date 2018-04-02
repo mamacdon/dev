@@ -30,10 +30,12 @@
 	// Sidebar
 	{ "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar" },
 	{ "keys": ["ctrl+shift+alt+r"], "command": "reveal_in_side_bar" },
-	{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": { "dir": "$file_path", "file": "$file_name" } },
+	{ "keys": ["ctrl+alt+r"], "command": "open_dir", "args": { "dir": "$file_path", "file": "$file_name" } },
+	//{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": { "dir": "$file_path", "file": "$file_name" } },
 
 	// GOTO
-	{ "keys": ["ctrl+alt+r"], "command": "goto_symbol_in_project" },
+	{ "keys": ["ctrl+shift+o"], "command": "goto_symbol_in_project" },
+	//{ "keys": ["ctrl+alt+r"], "command": "goto_symbol_in_project" },
 	// goto line - ctrl+l
 	{ "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 

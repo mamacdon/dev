@@ -45,4 +45,13 @@ echo && echo "Copy Sublime"
     cd "$SUBLIME_USER"
     find . -name '*.sublime-keymap'   -print -exec cp {} "$DEV/sublime" \;
     find . -name '*.sublime-settings' -print -exec cp {} "$DEV/sublime" \;
+    # dont want these
+    rm "$DEV/sublime/*LockTab*"
+)
+
+echo && echo "Copy vscode"
+(
+    cd "$HOME/AppData/Roaming/Code/User"
+    cp keybindings.json "$DEV/vscode/" && echo keybindings.json
+    cp settings.json    "$DEV/vscode/" && echo settings.json
 )
