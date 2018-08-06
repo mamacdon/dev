@@ -1,12 +1,19 @@
 {
+    "[typescript]": {
+        "editor.codeActionsOnSave": {}
+    },
+    "docker.showExplorer": false,
     "editor.dragAndDrop": false,
     "editor.folding": false,
+    "editor.fontSize": 14,
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "alt",
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.snippetSuggestions": "top",
     "editor.wordWrapColumn": 100,
+    "explorer.autoReveal": false,
     "explorer.enableDragAndDrop": false,
     "files.eol": "\n",
     "files.exclude": {
@@ -15,22 +22,41 @@
         "**/.hg": true,
         "**/.svn": true,
         "**/CVS": true,
-        "**/build/**": true,
+        "**/build/dist": true,
         "**/dist/**": true,
         "**/node_modules/": true,
+        "**/vendor/**": true,
         "*.log": true
     },
+    "git.autorefresh": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
     "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.gitExplorer.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.gitExplorer.includeWorkingTree": false,
+    "gitlens.historyExplorer.enabled": true,
+    "go.lintFlags": [
+        "--exclude=or.be.unexported"
+    ],
     "http.proxy": "http://10.43.216.8:8080",
-    "sublimeTextKeymap.promptV3Features": true,
+    "python.autoComplete.extraPaths": [
+        "C:\\Users\\10052628\\scoop\\apps\\python27\\current\\Lib"
+    ],
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style=setup.cfg"
+    ],
+    "python.linting.pep8Enabled": false,
+    "shellcheck.customArgs": [
+        "-x"
+    ],
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "window.restoreWindows": "all",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Monokai++",
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.tabSizing": "shrink",
     "workbench.iconTheme": "vs-minimal",
     "workbench.statusBar.feedback.visible": false
 }

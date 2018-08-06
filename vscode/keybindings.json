@@ -70,4 +70,10 @@
         "key": "ctrl+alt+r",
         "command": "workbench.action.files.revealActiveFileInWindows"
     },
+    {
+        // This works 
+        "key": "shift+delete",
+        "command": "",
+        "when": "editorTextFocus"
+    }
 ]
