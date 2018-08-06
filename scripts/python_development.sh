@@ -7,6 +7,8 @@ fi
 #C:\Users\10052628\scoop\apps\python\3.6.1\Scripts
 export WORKON_HOME=$WINHOME/.virtualenvs
 
-if [[ $(uname) != "Linux" ]] ; then
-    . $WINHOME/scoop/apps/python/3.6.1/Scripts/virtualenvwrapper.sh
-fi
+# if [[ $(uname) != "Linux" ]] ; then
+#     . $WINHOME/scoop/apps/python/3.6.1/Scripts/virtualenvwrapper.sh
+# fi
+
+export PYTHONIOENCODING=UTF-8
