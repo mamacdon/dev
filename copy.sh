@@ -30,17 +30,22 @@ BIN_SCRIPTS=(
     'nodejs_helpers.sh'
 )
 
-echo "Copy home"
+function section() {
+    echo
+    echo "$@"
+}
+
+section "Copy home"
 for FILE in "${HOME_SCRIPTS[@]}"; do
     cp "$HOME/$FILE" "$DEV/home/$FILE" || err "Failed to copy $HOME/$FILE"
 done
 
-echo && echo "Copy bin"
+section "Copy bin"
 for FILE in "${BIN_SCRIPTS[@]}"; do
     cp "$BIN/$FILE" "$DEV/scripts/$FILE" || err "Failed to copy $BIN/$FILE"
 done
 
-echo && echo "Copy Sublime"
+section "Copy Sublime"
 (
     cd "$SUBLIME_USER"
     find . -name '*.sublime-keymap'   -print -exec cp {} "$DEV/sublime" \;
@@ -49,9 +54,14 @@ echo && echo "Copy Sublime"
     rm "$DEV/sublime/*LockTab*"
 )
 
-echo && echo "Copy vscode"
+section "Copy vscode"
 (
     cd "$HOME/AppData/Roaming/Code/User"
     cp keybindings.json "$DEV/vscode/" && echo keybindings.json
     cp settings.json    "$DEV/vscode/" && echo settings.json
+)
+
+section "Copy vim"
+(
+    cp ~/.vimrc "$DEV/home/" && echo ".vimrc"
 )
