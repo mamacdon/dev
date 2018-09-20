@@ -15,6 +15,11 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "ctrl+cmd+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+shift+down",
         "command": "-editor.action.moveLinesDownAction",
         "when": "editorTextFocus"
@@ -25,8 +30,8 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+up",
-        "command": "-editor.action.moveLinesUpAction",
+        "key": "ctrl+cmd+up",
+        "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus"
     },
     {
@@ -66,14 +71,81 @@
         "command": "-revealFileInOS",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
+    // {
+    //     "key": "ctrl+alt+r",
+    //     "command": "revealFileInOS",
+    //     "when": "!editorFocus"
+    // },
     {
         "key": "ctrl+alt+r",
         "command": "workbench.action.files.revealActiveFileInWindows"
     },
     {
+        "key": "shift+cmd+k",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer"
+    },
+
+    {
         // This works 
         "key": "shift+delete",
         "command": "",
         "when": "editorTextFocus"
-    }
+    },
+    {
+        "key": "cmd+y",
+        "command": "redo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    // Cursor nav
+    {
+        "key": "ctrl+home",
+        "command": "cursorTop",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+end",
+        "command": "cursorBottom",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+home",
+        "command": "cursorTopSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+ctrl+end",
+        "command": "cursorBottomSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // History nav
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
 ]

@@ -5,7 +5,10 @@ if [ -z "$WINHOME" ]; then
 fi
 
 export GOBIN="$HOME/code/go/bin"
-export GOPATH="$WINHOME/code/go"
+
+[ -d "$WINHOME" ] && export GOPATH="$WINHOME/code/go"
+[[ $(uname) == Darwin ]] && export GOPATH="$HOME/code/go"
+
 # GOROOT is the location where Go package is installed on your system.
 # eg. /usr/local/go
 export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"

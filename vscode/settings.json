@@ -8,7 +8,7 @@
     "editor.fontSize": 14,
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
-    "editor.mouseWheelZoom": true,
+    "editor.mouseWheelZoom": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.snippetSuggestions": "top",
@@ -58,5 +58,7 @@
     "workbench.editor.enablePreview": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.iconTheme": "vs-minimal",
-    "workbench.statusBar.feedback.visible": false
+    "workbench.statusBar.feedback.visible": false,
+    "editor.mouseWheelScrollSensitivity": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }

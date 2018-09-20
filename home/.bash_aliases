@@ -32,7 +32,8 @@ alias l='ls -CF'
 # Misc
 alias grpe=grep
 alias wsk="wsk -i"
-alias edit="open -a 'Sublime Text' $@"
+#alias edit="open -a 'Sublime Text' $@"
+alias edit="open -a 'Visual Studio Code' $@"
 
 # CF stuff
 alias target="$HOME/bin/cf_target.sh"
@@ -85,18 +86,23 @@ function __win_killall() {
 	##taskkill //f //t //im "$NAME"'"*'
 }
 
-if uname | grep MINGW > /dev/null ; then
-	# interactive prompts don't work in cygwin/Git for windows
-	alias cf='winpty cf'
+# if uname | grep MINGW > /dev/null ; then
+# 	# interactive prompts don't work in cygwin/Git for windows
+# 	alias cf='winpty cf'
 
-	# ..but the above breaks piping so we need the original available too
-	alias pcf="'"$(which cf)"'"
+# 	# ..but the above breaks piping so we need the original available too
+# 	alias pcf="'"$(which cf)"'"
 
-	alias nvm=nodist
+# 	alias nvm=nodist
 
-	alias edit=__win_edit
-	alias open=__win_edit
-	alias killall=__win_killall
+# 	alias edit=__win_edit
+# 	alias open=__win_edit
+# 	alias killall=__win_killall
+# fi
+
+if [ $(uname) == "Darwin" ]; then
+	# OS X doesn't define the start command
+	alias start=open
 fi
 
 # https://github.com/github/hub
