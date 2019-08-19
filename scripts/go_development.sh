@@ -11,4 +11,6 @@ export GOBIN="$HOME/code/go/bin"
 
 # GOROOT is the location where Go package is installed on your system.
 # eg. /usr/local/go
-export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
+if [[ ${GOROOT:=} != "" ]]; then
+  export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
+fi

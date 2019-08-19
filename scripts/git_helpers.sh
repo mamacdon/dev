@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Checkout a new branch named <current_branch>+1
+git_branch_incr() {
+    echo TODO
+}
+
 # Delete branches matching $1
 git_delete_branches() {
     REGEX=${1?"Usage: git_delete_BRANCHes REGEX"}

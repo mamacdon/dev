@@ -31,48 +31,12 @@ nodejs_helper_cleanup() {
     # fi
 }
 
-# Usage: npm_shrinkwrap_clean path/to/package.json
-#
-# Helper to generate a pristine npm-shrinkwrap.json file.
-#
-# Given a package.json, performs an npm install in a temp directory bypassing the npm cache,
-# then generates a npm-shrinkwrap file to the same location as the provided package.json.
-# Any preexisting npm-shrinkwrap.json will be renamed to `npm-shrinkwrap.json.1`.
-#
-npm_shrinkwrap_clean() {
-    FILE="$1"
-    DEST=$(cd $(dirname "$FILE") && pwd)
-    [ ! -z "$FILE" ] || { nodejs_helper_error "Usage: shrinkwrap_clean /path/to/package.json" && return 1 ; }
-    [ -f "$FILE" ]   || { nodejs_helper_error "File does not exist: $FILE" && return 1 ; }
-    # TODO --production flag
-    PRODUCTION=""
-
-    TMPDIR=$(mktemp -d)
-    cp "$FILE" "$TMPDIR"
-
-    # Copy file: dependencies, if any - these must be in the temp folder or npm install will fail
-    for FILEDEP in $(jq < ${FILE} .dependencies,.optionalDependencies | grep 'file:' | awk '{print $2}' | tr -d '",' | cut -d ':' -f2); do
-        echo "Copy 'file:' dependency: $FILEDEP to $TMPDIR"
-        cp -r --parents "$FILEDEP" "$TMPDIR"
-    done
-
-    pushd "$TMPDIR" &>/dev/null
-    trap nodejs_helper_cleanup RETURN  # restore original dir before exiting
-
-    if npm cache clear \
-        && npm set progress=false \
-        && npm install ${PRODUCTION} \
-        && npm shrinkwrap \
-        && nodejs_helper_copy_with_backup "${TMPDIR}/npm-shrinkwrap.json" "${DEST}"
-    then
-        echo "Wrote ${DEST}/npm-shrinkwrap.json"
-    else
-        # Hosed
-        nodejs_helper_error "^^^ Failed :("
-        return 1
-    fi
+spotlight_nodejs_index_exclude() {
+    find . -type d -name "node_modules" -exec touch "{}/.metadata_never_index" \;
 }
 
-npm_whitewater() {
-    npm $@ --registry=https://npm-registry.whitewater.ibm.com
+# Prints the names of .js files under the CWD, excluding node_modules
+find_js_files() {
+    #find . -path ./node_modules -prune -o -name '*.js' "$@"
+    find . -type d \( -path ./node_modules -o -path ./dist -o -path ./build \) -prune -o -name '*.js' -print
 }

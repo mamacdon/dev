@@ -15,6 +15,7 @@ ssh_home_mamacdon_ca() {
     ssh mamacdon@home.mamacdon.ca \
         -i $HOME/.ssh/id_rsa \
         -p 2222 \
+        -L 6969:localhost:22 \
         -L 1139:localhost:139 \
         -L 3391:192.168.1.3:3389 \
         -L 5001:localhost:5001 \

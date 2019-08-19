@@ -48,6 +48,9 @@ alias dicekr=docker
 alias dickewr=docker
 alias dicker=docker
 
+# Frontend development
+alias ng="\$(yarn bin)"/ng
+
 ## Use the IP since most docker images will use Google DNS which can't resolve proxy hostname
 alias docker_build="MSYS_NO_PATHCONV=1 docker build \
 	--build-arg http_proxy=$PROXY_IP \
