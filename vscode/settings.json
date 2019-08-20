@@ -1,51 +1,52 @@
 {
-    "[typescript]": {
-        "editor.codeActionsOnSave": {}
-    },
-    "editor.dragAndDrop": false,
-    "editor.folding": false,
-    "editor.fontSize": 14,
-    "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
-    "editor.mouseWheelZoom": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderWhitespace": "all",
-    "editor.snippetSuggestions": "top",
-    "editor.wordWrapColumn": 100,
-    "explorer.autoReveal": false,
-    "explorer.enableDragAndDrop": false,
-    "files.eol": "\n",
-    "files.exclude": {
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true,
-        "**/build/dist": true,
-        "**/dist/**": true,
-        "**/node_modules/": true,
-        "**/vendor/**": true,
-        "*.log": true
-    },
-    "git.autorefresh": false,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.codeLens.enabled": false,
-    "python.formatting.provider": "yapf",
-    "python.formatting.yapfArgs": [
-        "--style=setup.cfg"
-    ],
-    "python.linting.pep8Enabled": false,
-    "shellcheck.customArgs": [
-        "-x"
-    ],
-    "window.restoreWindows": "all",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Monokai++",
-    "workbench.editor.enablePreview": true,
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.iconTheme": "vs-minimal",
-    "editor.mouseWheelScrollSensitivity": 1,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+  "[typescript]": {
+    "editor.codeActionsOnSave": {}
+  },
+  "editor.dragAndDrop": false,
+  "editor.folding": false,
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "editor.snippetSuggestions": "top",
+  "editor.wordWrapColumn": 100,
+  "explorer.autoReveal": false,
+  "explorer.enableDragAndDrop": false,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/build/dist": true,
+    "**/dist/**": true,
+    "**/node_modules/": true,
+    "**/vendor/**": true,
+    "*.log": true
+  },
+  "git.autorefresh": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": [
+    "--style=setup.cfg"
+  ],
+  "python.linting.pep8Enabled": false,
+  "shellcheck.customArgs": [
+    "-x"
+  ],
+  "window.restoreWindows": "all",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai++",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": "vs-minimal",
+  "editor.mouseWheelScrollSensitivity": 1,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "breadcrumbs.enabled": false
 }
