@@ -103,7 +103,7 @@ function __win_killall() {
 # 	alias killall=__win_killall
 # fi
 
-if [ $(uname) == "Darwin" ]; then
+if [[ $(uname) == "Darwin" ]]; then
 	# OS X doesn't define the start command
 	alias start=open
 fi

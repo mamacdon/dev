@@ -36,7 +36,7 @@
   "python.formatting.yapfArgs": [
     "--style=setup.cfg"
   ],
-  "python.linting.pep8Enabled": false,
+  "python.linting.pycodestyleEnabled": false,
   "shellcheck.customArgs": [
     "-x"
   ],
@@ -48,5 +48,6 @@
   "workbench.iconTheme": "vs-minimal",
   "editor.mouseWheelScrollSensitivity": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "http.proxy": "http://165.225.36.41:80"
 }
