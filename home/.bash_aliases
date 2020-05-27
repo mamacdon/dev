@@ -7,6 +7,9 @@ alias gb="git branch"
 #alias gbug=git_bug
 alias gd="git diff"
 alias gds="git diff --staged"
+alias gk="__gk"
+#alias gk='\gitk --branches $(git symbolic-ref --short -q HEAD) &
+#alias gk='\gitk $(git symbolic-ref --short -q HEAD) &'
 alias gl="git log"
 #alias glt="git glt"
 alias glt="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
@@ -59,11 +62,6 @@ alias docker_build="MSYS_NO_PATHCONV=1 docker build \
 
 alias scoop="powershell -ex unrestricted scoop.ps1"
 
-# Must be a function in order to get $@ plus & i guess?
-function gk() {
-	gitk "$@" &
-}
-
 # Called by .bash_profile after sourcing git-completion
 function git_autocomplete_aliases() {
 	# Autocompletion for aliases
@@ -71,6 +69,16 @@ function git_autocomplete_aliases() {
 	__git_complete ga _git_add
 	__git_complete gb _git_branch
 	__git_complete gp _git_pull
+}
+
+function __gk() {
+	local ref=""
+	if [[ $# -gt 1 ]]; then
+		ref=$(git symbolic-ref --short -q HEAD)
+		gitk --branches "$ref" &
+	else
+		gitk "$1" &
+	fi
 }
 
 function __win_edit() {

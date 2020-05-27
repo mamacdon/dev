@@ -49,5 +49,20 @@
   "editor.mouseWheelScrollSensitivity": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "breadcrumbs.enabled": false,
-  "http.proxy": "http://165.225.36.41:80"
+  "sonarlint.rules": {
+    "typescript:S4144": {
+      "level": "off"
+    },
+    "javascript:S905": {
+      "level": "off"
+    }
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
+  },
+  "cmake.configureOnOpen": true,
+  "C_Cpp.updateChannel": "Insiders",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "yaml.validate": false
 }

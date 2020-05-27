@@ -152,16 +152,40 @@
         "key": "ctrl+cmd+w",
         "command": "-workbench.action.toggleTabsVisibility"
     },
+
+    // Remove crappy keybindings for debug
     {
-        "key": "ctrl+cmd+w",
-        "command": "-workbench.action.toggleTabsVisibility"
+        "key": "f5",
+        "command": "-workbench.action.debug.continue"
     },
     {
-        "key": "ctrl+cmd+w",
-        "command": "-workbench.action.toggleTabsVisibility"
+        "key": "f10",
+        "command": "-workbench.action.debug.stepOver"
     },
     {
-        "key": "ctrl+cmd+w",
-        "command": "-workbench.action.toggleTabsVisibility"
+        "key": "f11",
+        "command": "-workbench.action.debug.stepInto"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split"
+    },
+
+    // Add debug keybindings 
+    {
+        "key": "cmd+\\",
+        "command": "workbench.action.debug.continue"
+    },
+    {
+        "key": "cmd+;",
+        "command": "workbench.action.debug.stepInto"
+    },
+    {
+        "key": "cmd+'",
+        "command": "workbench.action.debug.stepOver"
     },
 ]
