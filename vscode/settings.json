@@ -55,6 +55,9 @@
     },
     "javascript:S905": {
       "level": "off"
+    },
+    "typescript:S905": {
+      "level": "off"
     }
   },
   "[makefile]": {
@@ -64,5 +67,6 @@
   "cmake.configureOnOpen": true,
   "C_Cpp.updateChannel": "Insiders",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "yaml.validate": false
+  "yaml.validate": false,
+  "go.useLanguageServer": true
 }
